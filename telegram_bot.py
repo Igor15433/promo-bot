@@ -2,8 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-TOKEN = "COLE_SEU_TOKEN_AQUI"
-CHAT_ID = "COLE_SEU_CHAT_ID_AQUI"
+import os
+TOKEN = os.getenv("TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 def enviar(msg):
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
